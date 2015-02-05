@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.neurodesign.plugin.unreadmail">
+      </category>
+      <view
+            name="Courrier non-lu"
+            icon="icons/mailicon.gif"
+            category="com.neurodesign.plugin.unreadmail"
+            class="com.neurodesign.plugin.unreadmail.views.SampleView"
+            id="com.neurodesign.plugin.unreadmail.views.SampleView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.neurodesign.plugin.unreadmail.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="com.ibm.rcp.ui.shelfViews">
+      <shelfView
+            id="com.neurodesign.plugin.unreadmail.views.SampleView"
+            region="TOP"
+            showTitle="true"
+            view="com.neurodesign.plugin.unreadmail.views.SampleView">
+      </shelfView>
+   </extension>
+   <extension point="org.eclipse.ui.preferencePages">
+      <page id="PluginPreferencePage" name="Courrier non-lu"
+    		class="com.neurodesign.plugin.unreadmail.PluginPreferencePage">
+      </page>
+   </extension>
+</plugin>

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Unread Mail
+Bundle-SymbolicName: com.neurodesign.plugin.unreadmail;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.neurodesign.plugin.unreadmail.Activator
+Bundle-Vendor: Neuro Design inc.
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.ibm.rcp.ui,
+ com.ibm.notes.java.ui
+Bundle-ActivationPolicy: lazy
+Import-Package: lotus.domino
+Bundle-ClassPath: .
